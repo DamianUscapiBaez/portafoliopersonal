@@ -29,9 +29,9 @@ export function Introduction() {
                             <Link href="/works" className="text-cyan-500 px-6 py-3 my-2 transition-all border-2 cursor-pointer w-fit rounded-xl hover:shadow-xl hover:shadow-cyan/50">
                                 Ver proyectos
                             </Link>
-                            <Link href="/contact" className="px-6 py-3 my-2 transition-all border-2 cursor-pointer text-amber-500 border-amber-500 rounded-xl hover:shadow-xl hover:shadow-amber-700">
+                            {/* <Link href="/contact" className="px-6 py-3 my-2 transition-all border-2 cursor-pointer text-amber-500 border-amber-500 rounded-xl hover:shadow-xl hover:shadow-amber-700">
                                 Contacta conmigo
-                            </Link>
+                            </Link> */}
                         </div>
                     </motion.div>
                 </div>
