@@ -3,7 +3,7 @@ import { Transition } from '@/components/Transition/Transition'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Portofolio',
+  title: 'Damian Uscapi',
   description: '',
 }
 
