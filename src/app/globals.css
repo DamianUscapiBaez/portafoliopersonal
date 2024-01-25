@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1f2538;
+  color: #fff;
+}
+
+#cover {
+  background-color: #1f2538;
+  display: flex;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.currentIconPage svg {
+  stroke: rgb(255, 153, 0);
+  fill: rgb(255, 153, 0);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: #ffffff;
+}
+
+/* button */
+.btnClassBlue {
+  color: #ffbb00;
+  border: #ffbb00 2px solid;
+}
+
+::-webkit-scrollbar {
+  width: 5px; /* ajusta el ancho según sea necesario */
+}
+
+/* Cambiar el color del pulgar (thumb) del scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: #6d7892;
+  border-radius: 6px; /* ajusta el radio de la esquina según sea necesario */
+}
