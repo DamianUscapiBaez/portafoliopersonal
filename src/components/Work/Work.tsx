@@ -30,7 +30,7 @@ export function Work() {
                     Mis últimos <span className="text-cyan-400">trabajos realizados.</span>
                 </h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-2">
-                    {cardContent.map((project: Project, index: number) => (
+                    {cardContent.map((project, index) => (
                         <motion.div
                             key={index}
                             className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 mb-4"

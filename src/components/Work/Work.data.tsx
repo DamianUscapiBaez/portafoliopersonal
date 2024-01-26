@@ -13,7 +13,7 @@ export const cardContent = [
       "Diseño elegante para explorar sitios turísticos. Descubre destinos con facilidad a través de una atractiva presentación de lugares. Sumérgete en experiencias únicas con nuestro enfoque intuitivo y visualmente cautivador.",
     imageUrl: work1,
     repositoryLink: "https://github.com/DamianUscapiBaez/IncasPath",
-    demoLink: "#",
+    demoLink: "http://incapath.rf.gd",
     skills: [
       {
         icon: <FaHtml5 size="25" />
