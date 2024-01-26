@@ -1,9 +1,26 @@
-"use client"
-import { motion } from 'framer-motion'
-import { cardContent } from "./Work.data"
-import Image from "next/image"
-import { CiDesktop } from "react-icons/ci";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { CiDesktop } from 'react-icons/ci';
 import { FaGithub } from 'react-icons/fa';
+import { cardContent } from './Work.data'; // Make sure to import Project type
+
+interface ProjectLinkProps {
+    href: string;
+    icon: React.ReactNode;
+    label: string;
+}
+
+const ProjectLink: React.FC<ProjectLinkProps> = ({ href, icon, label }) => (
+    <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-xs bg-amber-500 text-white px-3 py-1.5 rounded-full flex items-center hover:bg-blue-700 transition-all duration-300"
+    >
+        {icon && <span className="mr-1">{icon}</span>}
+        {label}
+    </a>
+);
 
 export function Work() {
     return (
@@ -13,7 +30,7 @@ export function Work() {
                     Mis últimos <span className="text-cyan-400">trabajos realizados.</span>
                 </h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-2">
-                    {cardContent.map((project, index) => (
+                    {cardContent.map((project: Project, index: number) => (
                         <motion.div
                             key={index}
                             className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 mb-4"
@@ -25,12 +42,14 @@ export function Work() {
                                 className="w-full h-40 object-cover rounded-t-lg"
                                 src={project.imageUrl}
                                 alt="Project Image"
-                                width="500"
-                                height="400"
+                                width={500}
+                                height={400}
                             />
                             <div className="p-4">
                                 <h4 className="text-sm font-bold mb-2 text-gray-800">{project.title}</h4>
-                                <p className="text-xs text-gray-600 mb-1" style={{ textAlign: 'justify' }}>{project.description}</p>
+                                <p className="text-xs text-gray-600 mb-1" style={{ textAlign: 'justify' }}>
+                                    {project.description}
+                                </p>
                                 <div className="flex space-x-2 justify-center">
                                     {project.skills.map((skill, index) => (
                                         <div key={index} className="text-blue-500">
@@ -39,24 +58,8 @@ export function Work() {
                                     ))}
                                 </div>
                                 <div className="flex justify-center mt-2 space-x-2">
-                                    <a
-                                        href={project.repositoryLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-xs bg-blue-500 text-white px-3 py-1.5 rounded-full flex items-center hover:bg-blue-700 transition-all duration-300"
-                                    >
-                                        <FaGithub className="mr-1" />
-                                        Ver código
-                                    </a>
-                                    <a
-                                        href={project.demoLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-xs bg-green-500 text-white px-3 py-1.5 rounded-full flex items-center hover:bg-green-700 transition-all duration-300"
-                                    >
-                                        <CiDesktop className="mr-1" />
-                                        Ver demo
-                                    </a>
+                                    <ProjectLink href={project.repositoryLink} icon={<FaGithub />} label="Ver código" />
+                                    <ProjectLink href={project.demoLink} icon={<CiDesktop />} label="Ver demo" />
                                 </div>
                             </div>
                         </motion.div>

@@ -11,9 +11,13 @@ export function About() {
     const [index, setIndex] = useState(0);
 
     const accentColor = "#ffcc00"; // Amarillo para acentos
-
+    const motionTransitionsAbout = {
+        initial: { opacity: 0, scale: 0.5 },
+        animate: { opacity: 1, scale: 1 },
+        transition: { duration: 0.8, delay: 0.2 },
+    };
     return (
-        <div style={{ background: "#1f2538", color: "#00d9ff" }} className="min-h-screen flex flex-col md:flex-row items-center justify-center">
+        <div style={{ background: "#1f2538", color: "#00d9ff" }} className="min-h-screen flex items-center justify-center">
             <motion.div
                 initial={motionTransitionsAbout.initial}
                 animate={motionTransitionsAbout.animate}
@@ -31,9 +35,9 @@ export function About() {
                 </p>
                 <div className="flex flex-col mt-10 mb-3 md:flex-row justify-evenly md:mt-10 md:mb-5">
                     {dataAbout.map((dataText, itemIndex) => (
-                        <div key={dataText.id}
-                            className={`cursor-pointer ${index === dataText.id ? 'btnClassBlue duration-300 transition-all' : 'border-white'} 
-                            md:text-lg relative px-3 md:px-16 py-4 border-2 rounded-xl flex justify-between items-center my-3`}
+                        <div
+                            key={dataText.id}
+                            className={`cursor-pointer ${index === dataText.id ? 'btnClassBlue duration-300 transition-all' : 'border-white'} md:text-lg relative px-3 md:px-16 py-4 border-2 rounded-xl flex justify-between items-center my-3`}
                             onClick={() => setIndex(itemIndex)}
                         >
                             <p className="mr-4 text-md md:text-lg">{dataText.text}</p>
@@ -48,7 +52,10 @@ export function About() {
                 {index === 0 && (
                     <div className="max-w-4xl p-5 mx-auto rounded-xl grid gap-4 sm:gap-8 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 items-center justify-center">
                         {dataAboutSkills.map((items, index) => (
-                            <div key={index} className="flex flex-col items-center text-center p-3 bg-sky-400/10 hover:bg-sky-500/20 transition-colors duration-300 ease-in-out rounded-md">
+                            <div
+                                key={index}
+                                className="flex flex-col items-center text-center p-3 bg-sky-400/10 hover:bg-sky-500/20 transition-colors duration-300 ease-in-out rounded-md"
+                            >
                                 <div className="text-primary hover:text-accent">{items.icon}</div>
                                 <span className="text-xs hover:text-accent mt-3">{items.title}</span>
                             </div>
@@ -78,7 +85,7 @@ export function About() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="hidden md:flex relative items-center justify-center w-full md:w-1/2 md:max-w-4xl"
             >
-                <Image src={about} width="500" height="550" alt="Avatar" />
+                <Image src={about} width="500" height="550" alt="programming design" />
             </motion.div>
         </div>
     );
