@@ -59,7 +59,7 @@ export function Work() {
                                 </div>
                                 <div className="flex justify-center mt-2 space-x-2">
                                     <ProjectLink href={project.repositoryLink} icon={<FaGithub />} label="Ver código" />
-                                    <ProjectLink href={project.demoLink} icon={<CiDesktop />} label="Ver demo" />
+                                    {/* <ProjectLink href={project.demoLink} icon={<CiDesktop />} label="Ver demo" /> */}
                                 </div>
                             </div>
                         </motion.div>
