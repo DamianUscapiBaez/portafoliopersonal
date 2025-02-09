@@ -51,19 +51,19 @@ export const dataAboutList = [
     id: 1,
     experience: [
       {
+        title: "Programador Front-end React, LAPTOP PRO, Cusco",
+        date: "ago. 2022 - abr. 2023",
+        data: `Colaboré en el desarrollo de interfaces dinámicas y formularios utilizando React.js,
+        asegurando una integración efectiva a través de API REST PHP. Mi enfoque contribuyó a
+        mejorar la experiencia del usuario y la funcionalidad del sistema de manera integral.`
+      },
+      {
         title: "Programador C#, Cusco Informático, Cusco",
         date: "nov. 2019 - feb. 2020",
         data: `Dominio sólido en la creación de formularios y aplicaciones mediante C#, junto con la
         capacidad de establecer conexiones efectivas con bases de datos SQL. He creado
         interfaces intuitivas y sistemas de gestión de datos eficientes, asegurando una
         experiencia de usuario fluida y un manejo confiable de la información.`
-      },
-      {
-        title: "Programador Front-end React, LAPTOP PRO, Cusco",
-        date: "ago. 2022 - mar. 2023",
-        data: `Colaboré en el desarrollo de interfaces dinámicas y formularios utilizando React.js,
-        asegurando una integración efectiva a través de API REST PHP. Mi enfoque contribuyó a
-        mejorar la experiencia del usuario y la funcionalidad del sistema de manera integral.`
       },
     ]
   },
